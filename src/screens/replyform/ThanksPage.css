@@ -1,0 +1,25 @@
+.thanks_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.inner_thanks_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h4 {
+    margin: 0;
+    margin-bottom: 0.6rem;
+}
+.inner_thanks_box > button {
+    padding: 0.6rem 2.2rem;
+    color: white;
+    background-color: #8870c9;
+    margin-top: 1rem;
+    border: 0;
+    border-radius: 0.2rem;
+}

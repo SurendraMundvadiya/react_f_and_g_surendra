@@ -1,0 +1,12 @@
+input[type="text"] {
+    /* margin: 3px 1px 1px 1px; */
+    width: 100%;
+
+    border-radius: 0.2rem;
+    border: 0.75px solid #8d8d8d80;
+    padding: 0.5rem 0.8rem;
+}
+
+label {
+    padding-left: 0.4rem;
+}
