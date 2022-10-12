@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 const email_regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
 const phone_regex = /[0-9]/gim;
 export const validation = (obj: any) => {

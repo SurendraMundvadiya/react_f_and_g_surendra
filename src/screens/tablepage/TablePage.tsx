@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useMemo, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import ReloadIcon from "../../assets/ReloadIcon";
 import SearchIcon from "../../assets/SearchIcon";
 import Table from "../../components/table/Table";
@@ -8,9 +8,9 @@ const TablePage: React.FC = () => {
     const navigate = useNavigate();
     const [tableData, setTableData] = useState<any[]>();
     const [filtered, setFiltered] = useState<string[]>([]);
+    const myData = localStorage.getItem("myDataStorage");
     const intial_state = () => {
         const temp = [];
-        const myData = localStorage.getItem("myDataStorage");
         if (myData) {
             temp.push(...JSON.parse(myData));
             setTableData([...temp]);
@@ -19,6 +19,7 @@ const TablePage: React.FC = () => {
 
     useEffect(() => {
         intial_state();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const get_selected_list = (arr: string[]) => {
@@ -33,8 +34,8 @@ const TablePage: React.FC = () => {
     };
     const search = (e: { target: { value: string } }) => {
         const search_text = e.target.value?.trim().toLowerCase();
-        if (search_text && search_text.length > 0) {
-            const temp = tableData?.filter((el) => el["Customer Name"]?.toLowerCase().includes(search_text));
+        if (search_text && search_text.length > 0 && myData) {
+            const temp = JSON.parse(myData)?.filter((el: any) => el["Customer Name"]?.toLowerCase().includes(search_text));
             if (temp) setTableData([...temp]);
             else setTableData([]);
         } else {
@@ -66,7 +67,7 @@ const TablePage: React.FC = () => {
                 <Table data={tableData} get_selected_list={get_selected_list} />
             </div>
             <div className="footer">
-                <button onClick={delete_selected}>Delete</button>
+                <button onClick={delete_selected}>Delete({filtered.length})</button>
             </div>
         </div>
     );
