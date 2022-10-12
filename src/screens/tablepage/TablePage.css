@@ -1,7 +1,7 @@
 .outer_box {
     padding: 1rem;
 }
-.header {
+.table_header {
     padding: 0.4rem;
     /* background-color: white; */
     border-radius: 0.4rem;
@@ -28,7 +28,7 @@ h6 {
 }
 .icon_button {
     margin: 0 0.8rem;
-    margin-left: 1.2rem;
+    margin-left: 2.2rem;
     padding: 0rem 0.6rem;
     padding-top: 0.28rem;
     border: 0.5px solid #c7c7c7;
@@ -36,12 +36,13 @@ h6 {
     border-radius: 0.2rem;
 }
 .new_button {
-    margin-right: 0.4rem;
+    /* margin-right: 0.4rem; */
     padding: 0.4rem 0.8rem;
     color: white;
     background-color: #48a44c;
     border: 0;
     border-radius: 0.2rem;
+    min-width: 6rem;
 }
 
 .content_box {

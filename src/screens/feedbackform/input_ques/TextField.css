@@ -1,7 +1,17 @@
 input[type="text"] {
-    /* margin: 3px 1px 1px 1px; */
     width: 100%;
-
+    border-radius: 0.2rem;
+    border: 0.75px solid #8d8d8d80;
+    padding: 0.5rem 0.8rem;
+}
+input[type="number"] {
+    width: 100%;
+    border-radius: 0.2rem;
+    border: 0.75px solid #8d8d8d80;
+    padding: 0.5rem 0.8rem;
+}
+input[type="email"] {
+    width: 100%;
     border-radius: 0.2rem;
     border: 0.75px solid #8d8d8d80;
     padding: 0.5rem 0.8rem;
@@ -9,4 +19,21 @@ input[type="text"] {
 
 label {
     padding-left: 0.4rem;
+}
+.error_msg {
+    color: red;
+    border: 0.75px solid red;
+    background-color: #ffe8e8;
+    font-size: 0.8rem;
+    padding: 0.2rem;
+    margin-top: 0.6rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    width: 79%;
+}
+@media (max-width: 950px) {
+    .error_msg {
+        width: 98%;
+    }
 }

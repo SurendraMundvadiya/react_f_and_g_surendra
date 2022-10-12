@@ -1,16 +1,14 @@
 import React from "react";
 import "./App.css";
-import Feedbackform from "./screens/feedbackform/Feedbackform";
-import ThanksPage from "./screens/replyform/ThanksPage";
-import TablePage from "./screens/tablepage/TablePage";
-
+import RouterPage from "./RouterPage";
+import { BrowserRouter } from "react-router-dom";
 function App() {
     return (
-        <div className="main_box">
-            <Feedbackform />
-            {/* <ThanksPage /> */}
-            {/* <TablePage /> */}
-        </div>
+        <BrowserRouter>
+            <div className="main_box">
+                <RouterPage />
+            </div>
+        </BrowserRouter>
     );
 }
 

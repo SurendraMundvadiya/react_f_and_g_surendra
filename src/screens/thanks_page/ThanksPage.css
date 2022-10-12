@@ -11,9 +11,10 @@
     justify-content: center;
     flex-direction: column;
 }
-h4 {
+.thanks_text {
     margin: 0;
     margin-bottom: 0.6rem;
+    text-align: center;
 }
 .inner_thanks_box > button {
     padding: 0.6rem 2.2rem;

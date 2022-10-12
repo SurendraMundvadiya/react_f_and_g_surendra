@@ -6,7 +6,7 @@
     background-color: white;
     border-radius: 0.4rem;
 }
-h2 {
+.main_title {
     margin: 0;
 }
 .content_box {
@@ -32,7 +32,7 @@ h2 {
     width: 80%;
     justify-content: space-between;
 }
-h4 {
+.question_text {
     margin: 0;
     margin-bottom: 0.4rem;
     font-weight: bold;
